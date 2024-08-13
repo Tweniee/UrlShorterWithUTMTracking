@@ -10,9 +10,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.redirectHashController = void 0;
-const Respone_helper_1 = require("../helper/Respone.helper");
-const statusCode_constant_1 = require("../constants/statusCode.constant");
 const tracking_service_1 = require("../service/tracking.service");
+const response_contant_1 = require("../constants/response.contant");
 const redirectHashController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const hash = req.params["hash"];
     const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
@@ -20,11 +19,12 @@ const redirectHashController = (req, res) => __awaiter(void 0, void 0, void 0, f
     const parentData = yield (0, tracking_service_1.checkValidHashService)(hash);
     //   return res.redirect('https://www.google.com');
     if (parentData.length == 0) {
-        return (0, Respone_helper_1.errorResponse)(res, {
-            statusCode: statusCode_constant_1.statusCodes.NOT_FOUND.code,
-            message: statusCode_constant_1.statusCodes.NOT_FOUND.message,
-            error: {},
-        });
+        // return errorResponse(res, {
+        //   statusCode: statusCodes.NOT_FOUND.code,
+        //   message: statusCodes.NOT_FOUND.message,
+        //   error: {},
+        // });
+        return res.redirect(response_contant_1.junkUrl);
     }
     return res.redirect(parentData[0].originalUrl);
 });

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.INVALID_PARAMETERS = exports.INVALID_ROUTE = exports.DB_CONNECTED = exports.serverCreatedMessage = void 0;
+exports.junkUrl = exports.INVALID_PARAMETERS = exports.INVALID_ROUTE = exports.DB_CONNECTED = exports.serverCreatedMessage = void 0;
 const serverCreatedMessage = "Server listening to=>";
 exports.serverCreatedMessage = serverCreatedMessage;
 const DB_CONNECTED = "Database connected successfully:)";
@@ -9,3 +9,5 @@ const INVALID_ROUTE = "Route not found";
 exports.INVALID_ROUTE = INVALID_ROUTE;
 const INVALID_PARAMETERS = "Invalid parameters";
 exports.INVALID_PARAMETERS = INVALID_PARAMETERS;
+const junkUrl = "https://askphill.com/pages/404";
+exports.junkUrl = junkUrl;
