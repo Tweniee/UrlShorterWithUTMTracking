@@ -11,9 +11,9 @@ const urlRequestValidation = (req, res, next) => {
     try {
         const urlShorterSchema = joi_1.default.object({
             originalUrl: joi_1.default.string().uri().required(),
-            utmSource: joi_1.default.string().alphanum().required(),
-            utmMedium: joi_1.default.string().alphanum().required(),
-            utmCampaign: joi_1.default.string().alphanum().required(),
+            utmSource: joi_1.default.string().required(),
+            utmMedium: joi_1.default.string().required(),
+            utmCampaign: joi_1.default.string().required(),
             validTimes: joi_1.default.number().integer().min(1),
         });
         const isValid = urlShorterSchema.validate(req.body);

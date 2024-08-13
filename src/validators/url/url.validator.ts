@@ -11,9 +11,9 @@ export const urlRequestValidation = (
   try {
     const urlShorterSchema = Joi.object({
       originalUrl: Joi.string().uri().required(),
-      utmSource: Joi.string().alphanum().required(),
-      utmMedium: Joi.string().alphanum().required(),
-      utmCampaign: Joi.string().alphanum().required(),
+      utmSource: Joi.string().required(),
+      utmMedium: Joi.string().required(),
+      utmCampaign: Joi.string().required(),
       validTimes: Joi.number().integer().min(1),
     });
 

@@ -15,11 +15,13 @@ const UrlSchema = new Schema(
   {
     originalUrl: { type: String, require: true, unique: true },
     shortUrl: { type: String, require: true, unique: true },
+    hash: { type: String, require: true, unique: true },
     utmSource: { type: String, default: "Global" },
     utmMedium: { type: String, default: "Global" },
     utmCampaign: { type: String, default: "Global" },
+    validTimes: { type: String, default: 1 },
   },
   { timestamps: true, versionKey: false }
 );
 
-const Url = model<IUrlSchema>("UrlSchema", UrlSchema);
+export const urlModel = model<IUrlSchema>("UrlSchema", UrlSchema);
