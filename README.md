@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a URL shortening service built with Node.js, Express, and MongoDB, utilizing TypeScript for type safety and enhanced developer experience. The service provides unique hash generation for each URL, UTM tracking for campaigns and events, and user tracking for data analysis.
+This project is a URL Hashing service built with Node.js, Express, and MongoDB, utilizing TypeScript for type safety and enhanced developer experience. The service provides unique hash generation for each URL, UTM tracking for campaigns and events, and user tracking for data analysis.
 
 ## Features
 
