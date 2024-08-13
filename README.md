@@ -48,7 +48,7 @@ To run this project, you need to have the following installed:
 
 ## Contributing
 
-Feel free to submit issues, feature requests, or pull requests.
+Feel free to submit issues, feature requests, or pull requests. maybe i will help haha
 
 ## License
 
