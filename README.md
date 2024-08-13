@@ -1,4 +1,4 @@
-# URL Shortener Service
+# URL Hashing Service
 
 ## Description
 
