@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { errorResponse, successResponse } from "../helper/Respone.helper";
+import {  successResponse } from "../helper/Respone.helper";
 import { statusCodes } from "../constants/statusCode.constant";
 import { isDuplicateRequest, updateInsertUrlShortnerService, urlShortnerService } from "../service/url.service";
-import validUrl from "valid-url";
+
 
 export const urlShorterController = async (req: Request, res: Response) => {
   const { originalUrl, utmSource, utmMedium, utmCampaign, validTimes } =
