@@ -1,7 +1,8 @@
 import { urlModel } from "../model/urlSorter.model";
 import shortid from "shortid";
 export const urlShortnerService = async (baseUrl: string, body: any) => {
-  const { originalUrl, utmSource, utmMedium, utmCampaign, validTimes } = body;
+  let { originalUrl, utmSource, utmMedium, utmCampaign, validTimes } = body;
+  validTimes = Number(validTimes)
   console.log(baseUrl);
   const hash = shortid.generate();
   const shortUrl = baseUrl + "/" + hash;

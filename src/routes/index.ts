@@ -1,3 +1,3 @@
-import urlRoute from "./url.route";
-
-export { urlRoute };
+import urlRoute from "./url.routes";
+import redirectRoute from "./redirect.routes"
+export { urlRoute,redirectRoute };

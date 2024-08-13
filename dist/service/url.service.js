@@ -16,7 +16,8 @@ exports.updateInsertUrlShortnerService = exports.isDuplicateRequest = exports.ur
 const urlSorter_model_1 = require("../model/urlSorter.model");
 const shortid_1 = __importDefault(require("shortid"));
 const urlShortnerService = (baseUrl, body) => __awaiter(void 0, void 0, void 0, function* () {
-    const { originalUrl, utmSource, utmMedium, utmCampaign, validTimes } = body;
+    let { originalUrl, utmSource, utmMedium, utmCampaign, validTimes } = body;
+    validTimes = Number(validTimes);
     console.log(baseUrl);
     const hash = shortid_1.default.generate();
     const shortUrl = baseUrl + "/" + hash;

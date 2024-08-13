@@ -9,6 +9,6 @@ const UrlSchema = new mongoose_1.Schema({
     utmSource: { type: String, default: "Global" },
     utmMedium: { type: String, default: "Global" },
     utmCampaign: { type: String, default: "Global" },
-    validTimes: { type: String, default: 1 },
+    validTimes: { type: Number, default: 1 },
 }, { timestamps: true, versionKey: false });
 exports.urlModel = (0, mongoose_1.model)("UrlSchema", UrlSchema);

@@ -1,9 +1,10 @@
 import { Schema, model } from "mongoose";
 
-// Interface of User model
+
 export interface IUrl {
   originalUrl: string;
   shortUrl: string;
+  hash: string,
   utmSource: string;
   utmMedium: string;
   utmCampaign: string;
@@ -19,7 +20,7 @@ const UrlSchema = new Schema(
     utmSource: { type: String, default: "Global" },
     utmMedium: { type: String, default: "Global" },
     utmCampaign: { type: String, default: "Global" },
-    validTimes: { type: String, default: 1 },
+    validTimes: { type: Number, default: 1 },
   },
   { timestamps: true, versionKey: false }
 );

@@ -1,1 +1,4 @@
-Ts-node is woroking really slow with nodemon so switching back to tsc-w
+// Ts-node is woroking really slow with nodemon so switching back to tsc-w
+
+//gonna store all the hash in tracking table weather its valid or not
+// because data is Data
